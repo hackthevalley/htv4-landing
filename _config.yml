@@ -16,12 +16,12 @@
 title: Hack the Valley 4
 email: hello@hackthevalley.io
 description: >- # this means to ignore newlines until "baseurl:"
-  UofT Scarborough is hosting a 36h Hackathon from February 22nd to 24th, 2019.
+  UofT Scarborough is hosting a 36h Hackathon from February 14nd to 16th, 2020.
   Get your hands on some of the top hardware and API's out there and put your
   creativity to the test!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-copyright: Copyright Hack the Valley 2018
+copyright: Copyright Hack the Valley 2019
 facebook_username: hackthevalley
 github_username: hackthevalley
 
