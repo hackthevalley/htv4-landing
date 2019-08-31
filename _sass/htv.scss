@@ -28,6 +28,21 @@
     }
   }
 
+  &__placeholder {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.4;
+    margin-top: -60px;
+    #{ $self }__section--show & {
+      animation: htv__placeholder 0.8s ease-in-out 0.2s backwards;
+      @keyframes htv__placeholder {
+        from { opacity: 0; }
+        to { opacity: 0.4; }
+      }
+    }
+  }
+
   &__header {
     font-size: 4rem;
     text-transform: uppercase;

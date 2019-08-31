@@ -2,8 +2,8 @@
 layout: default
 
 header:
-  headingText: Hack The<br>Valley 3
-  subtitleText: February 22-24 | UofT Scarborough
+  headingText: Hack The<br>Valley 4
+  subtitleText: February 14-16 | UofT Scarborough
   emailPlaceholderText: Enter your email address
 
 nav:
@@ -19,9 +19,6 @@ nav:
   - text: Sponsors
     scroll: true
     link: "#sponsors"
-  - text: Acceptances
-    scroll: false
-    link: "https://acceptance.hackthevalley.io/"
 
 about:
   headingText: About
@@ -47,7 +44,7 @@ faq:
 
       - headingText: Am I Accepted?
         bodyText: >-
-          We have already sent out our acceptances! Please check your spam box if you can't find it. You can also login with your hacker account <a href="https://acceptance.hackthevalley.io">here</a> to check your status!
+          We have already sent out our acceptances! Please check your spam box if you can't find it. You can also login with your hacker account to check your status!
         backgroundColor: "brown"
 
       - headingText: Once I am accepted, what do I need to bring?
@@ -370,7 +367,8 @@ startups:
 
 <section id="schedule">
   <h2 class="htv__header faq__heading">Schedule</h2>
-  <iframe src="/assets/schedule/index.html?v=6"></iframe>
+  <p class="htv__placeholder">Coming soon</p>
+  <!-- <iframe src="/assets/schedule/index.html?v=6"></iframe> -->
 </section>
 
 <section id="sponsors" class="sponsors htv__section">
@@ -378,6 +376,8 @@ startups:
     <h2 class="htv__header sponsors__heading">{{
       page.sponsors.headingText
     }}</h2>
+    <p class="htv__placeholder">To be announced</p>
+    <!--
     {% for item in page.sponsors.types %}
       <div class="sponsors__container sponsors__container--{{ item.type }}">
       {% for logo in item.logos %}
@@ -442,6 +442,7 @@ startups:
         <div style="width: 100%;"></div>
         {% endif %}
       {% endfor %}
+      <p>To be announced</p>
     </div>
     <div class="htv__leaf--fade faq__leaf faq__leaf--0">
       <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
@@ -496,6 +497,6 @@ startups:
         <path d="M425.8,56.89l.47-1.1-.42,1Z" />
         <path d="M71.71,109.67C269.07-91.1,426.27,55.79,426.27,55.79s-58,51.37-239.21,70.92c0,0,112.92,15.15,225.15-39.89l.09.11c16.07-7.69,97.5-47.15,132-74.11,38.32-30,23.64.73,5.52,10.32C534.09,31.43,436.07,79.66,410,92.47,286.36,338.11,30.69,164.22,0,142.12,7.82,146.68,31,153.22,71.71,109.67Z" />
       </svg>
-    </div>
+    </div> -->
   </div>
 </section>

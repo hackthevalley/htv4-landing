@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Hack the Valley 3
+title: Hack the Valley 4
 email: hello@hackthevalley.io
 description: >- # this means to ignore newlines until "baseurl:"
   UofT Scarborough is hosting a 36h Hackathon from February 22nd to 24th, 2019.
