@@ -9,6 +9,21 @@
     flex-wrap: wrap;
   }
 
+  &__footer-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  &__footer-link {
+    transition: 0.2s ease-in-out color;
+    text-decoration: underline;
+    color: #8DC53E;
+    &:hover {
+      color: adjust-color($color: #8DC53E, $lightness: -10%);
+    }
+  }
+
   &__leaf {
     &--0 {
       width: 200px;
