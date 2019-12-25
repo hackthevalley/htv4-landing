@@ -2,7 +2,8 @@
 layout: default
 
 header:
-  headingText: Hack The<br>Valley 4
+  headingText: Hack The
+<br>Valley 4
   subtitleText: February 14-16 | UofT Scarborough
   emailPlaceholderText: Enter your email address
 
@@ -24,12 +25,12 @@ about:
   headingText: About
   bodyText: >-
     Join 750 innovative and creative developers, designers, and creators for
-    <strong>36 hours of hacking</strong>. You'll get access to some of the
+<strong>36 hours of hacking</strong>. You'll get access to some of the
     best hardware and APIs on the market. Plus get to meet some experienced
     and awesome mentors! All this in just one weekend? I know, it's hard to
     believe.
-    <br>
-    <br>
+<br>
+<br>
     Remember, you don't need to be a pro to attend. So, if this is your first
     hackathon, we can't wait to expose you to the incomparable world of
     creation.
@@ -45,7 +46,8 @@ faq:
       - headingText: What do I need to bring?
         bodyText: >-
           You’ll need: A laptop and charger. Everything else is optional. However, we strongly encourage you to bring a sleeping bag, pillows, toiletries, and a couple of changes of clothes.
-          <br/><br/>
+<br />
+<br />
           You won’t need: An idea, or a team. You can create your own team (teams of 4 recommended) during the hackathon, and generate some amazing creations along the way. You also don’t need to worry about food, we’ve got you covered.
         backgroundColor: "green"
 
@@ -81,26 +83,74 @@ faq:
 sponsors:
   headingText: Sponsors
   types:
-    - name: Gold Sponsors
-      size: 400
+<!-- - name: Gold Sponsors
+  size: 400
+  companies:
+    - name: Facebook
+      href: facebook.com
+      src: /uploads/Logos/facebook.png-->
+<!-- - name: Silver Sponsors
+  size: 340
+  companies:
+    - name: Facebook
+      href: facebook.com
+      src: /uploads/Logos/facebook.png-->
+    - name: Bronze Sponsors
+      size: 300
       companies:
         - name: Facebook
           href: facebook.com
-          src: /uploads/facebook.png
+          src: /uploads/Logos/facebook.png
+        - name: Sonder
+          href: www.sonder.com
+          src: /uploads/Logos/sonder.png
+        - name: Balsamiq
+          href: balsamiq.com
+          src: /uploads/Logos/balsamiq.png
+        - name: Major League Hacking
+          href: mlh.io
+          src: /uploads/Logos/mlh.png
+    - name: General Sponsors
+      size: 260
+      companies:
+        - name: Google
+          href: careers.google.com/jobs
+          src: /uploads/Logos/google.png
+        - name: Paytrie
+          href: paytrie.com
+          src: /uploads/Logos/paytrie.png
+        - name: Product Hunt
+          href: producthunt.com
+          src: /uploads/Logos/producthunt.png
+        - name: JetBrains
+          href: jetbrains.com
+          src: /uploads/Logos/jetbrains.png
+        <!-- - name: FGF Brands
+         href: fgfbrands.com
+         src: /uploads/Logos/fgf.png-->
+    - name: Other Sponsors
+      size: 225
+      companies:
+        - name: LiftOvers
+          href: liftovers.ca
+          src: /uploads/Logos/liftovers.png
+        - name: Fuse
+          href: f.energy
+          src: /uploads/Logos/fuse.png
 ---
 <nav id="nav" class="nav">
   <div class="nav__wrapper">
     <ul class="nav__items">
       {% for nav_item in page.nav %}
-        <li class="nav__item{% if nav_item.modifier %} nav__item--{{ nav_item.modifier }}{% endif %}">
-          <a
-            onclick="toggleNavigation(false); scrollTo(this)"
-            class="nav__item-link{% if nav_item.scroll %} scroll{% endif %}"
-            href="{{ nav_item.link }}"
-          >{{
+      <li class="nav__item{% if nav_item.modifier %} nav__item--{{ nav_item.modifier }}{% endif %}">
+        <a onclick="toggleNavigation(false); scrollTo(this)"
+           class="nav__item-link{% if nav_item.scroll %} scroll{% endif %}"
+           href="{{ nav_item.link }}">
+          {{
             nav_item.text
-          }}</a>
-        </li>
+          }}
+        </a>
+      </li>
       {% endfor %}
     </ul>
     <div class="nav__menu" onclick="toggleNavigation()">
@@ -114,14 +164,18 @@ sponsors:
 <section id="header" class="header htv__section">
   <div class="htv__content htv__content--header header__content">
 
-    <h1 class="header__title">{{
+    <h1 class="header__title">
+      {{
       page.header.headingText
-    }}</h1>
+      }}
+    </h1>
 
-    <span class="header__subtitle">{{
+    <span class="header__subtitle">
+      {{
       page.header.subtitleText
-    }}</span>
-    
+      }}
+    </span>
+
     <div class="htv__leaf--fade header__leaf header__leaf--0">
       <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
         <path d="M425.8,56.89l.47-1.1-.42,1Z" />
@@ -154,13 +208,17 @@ sponsors:
 <section id="about" class="about htv__section">
   <div class="htv__content about__container">
 
-    <h2 class="htv__header about__heading">{{
+    <h2 class="htv__header about__heading">
+      {{
       page.about.headingText
-    }}</h2>
+      }}
+    </h2>
 
-    <p class="about__body">{{
+    <p class="about__body">
+      {{
       page.about.bodyText
-    }}</p>
+      }}
+    </p>
 
     <div class="htv__leaf--fade about__leaf about__leaf--0">
       <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
@@ -182,25 +240,25 @@ sponsors:
     <h2 class="htv__header faq__heading">FAQs</h2>
     <div class="faq__items">
       {% for column in page.faq.columns %}
-        <div class="faq__column">
-          {% for item in column %}
-            <div class="faq__qa faq__qa--{{ forloop.index }} faq__qa--{{ item.backgroundColor }}">
-              <h3 class="faq__qa_heading">{{ item.headingText }}</h3>
-              <p class="faq__qa_body">{{ item.bodyText }}</p>
-              
-              {% if item.linkText %}
-                <a
-                  class="faq__qa_link"
-                  href="{{ item.linkHref }}"
-                  rel="noopener noreferrer"
-                >{{
-                  item.linkText
-                }}</a>
-              {% endif %}
+      <div class="faq__column">
+        {% for item in column %}
+        <div class="faq__qa faq__qa--{{ forloop.index }} faq__qa--{{ item.backgroundColor }}">
+          <h3 class="faq__qa_heading">{{ item.headingText }}</h3>
+          <p class="faq__qa_body">{{ item.bodyText }}</p>
 
-            </div>
-          {% endfor %}
+          {% if item.linkText %}
+          <a class="faq__qa_link"
+             href="{{ item.linkHref }}"
+             rel="noopener noreferrer">
+            {{
+                  item.linkText
+            }}
+          </a>
+          {% endif %}
+
         </div>
+        {% endfor %}
+      </div>
       {% endfor %}
     </div>
     <div class="htv__leaf--fade faq__leaf faq__leaf--0">
@@ -226,40 +284,41 @@ sponsors:
 
 <section id="sponsors" class="sponsors htv__section">
   <div class="htv__content">
-    <h2 class="htv__header sponsors__heading">{{
+    <h2 class="htv__header sponsors__heading">
+      {{
       page.sponsors.headingText
-    }}</h2>
+      }}
+    </h2>
     {% for type in page.sponsors.types %}
-      <div class="sponsors__container">
-        <h3 class='htv__header sponsors__heading sponsors__heading--sub'>{{
-          type.name  
-        }}</h3>
-        <div class='sponsors__items'>
-          {% for company in type.companies %}
-            <a
-              class="sponsors__link"
-              href="https://{{ company.href }}?utm_source=hackthevalleyio&utm_medium=referral&utm_campaign=htv4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="sponsors__logo"
-                src="{{ company.src }}"
-                alt="logo"
-                width="{{ type.size }}"
-              />
-            </a>
-          {% endfor %}
-        </div>
+    <div class="sponsors__container">
+      <h3 class='htv__header sponsors__heading sponsors__heading--sub'>
+        {{
+          <br/>
+        }}
+      </h3>
+      <div class='sponsors__items'>
+        {% for company in type.companies %}
+        <a class="sponsors__link"
+           href="https://{{ company.href }}?utm_source=hackthevalleyio&utm_medium=referral&utm_campaign=htv4"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img class="sponsors__logo"
+               src="{{ company.src }}"
+               alt="logo"
+               width="{{ type.size }}" />
+        </a>
+        {% endfor %}
       </div>
+    </div>
     {% endfor %}
     <p class="sponsors__footer-text">Interested in being a sponsor?</p>
-    <p class="sponsors__footer-text">Send us an inquiry at 
+    <p class="sponsors__footer-text">
+      Send us an inquiry at
       <a class='sponsors__footer-link' href='mailto:prasv.patel@mail.utoronto.ca'>
         prasv.patel@mail.utoronto.ca
       </a>
     </p>
-  
+
     <div class="htv__leaf--fade faq__leaf faq__leaf--0">
       <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
         <path d="M425.8,56.89l.47-1.1-.42,1Z" />
