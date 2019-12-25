@@ -274,7 +274,7 @@ sponsors:
     {% for type in page.sponsors.types %}
       <div class="sponsors__container">
         <h3 class='htv__header sponsors__heading sponsors__heading--sub'>{{
-          <br/>
+          type.name<br/>
         }}</h3>
         <div class='sponsors__items'>
           {% for company in type.companies %}
