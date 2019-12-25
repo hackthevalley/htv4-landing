@@ -57,13 +57,6 @@
     &:not(&--show) > * { opacity: 0 }
     padding: $spacing-unit 0;
 
-    &:nth-of-type(even) {
-      background-color: $grey-color;
-    }
-    &:nth-of-type(odd) {
-      background-color: $background-color;
-    }
-
     &.header {
       background-color: $brand-color;
     }

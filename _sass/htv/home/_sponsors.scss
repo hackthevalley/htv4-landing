@@ -1,10 +1,19 @@
 .sponsors {
   $self: &;
 
+  &__heading {
+    &--sub {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+  }
+
   &__container {
+    margin-bottom: 20px;
+  }
+
+  &__items {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -39,26 +48,6 @@
     }
   }
 
-  &__link {
-    display: inline-block;
-    text-align: center;
-    margin: 20px;
-    width: calc(20% - 40px);
-    transition: 0.2s ease-out transform;
-
-    &:hover {
-      transform: scale(1.15) translate3d(0, 0, 0);
-    }
-
-    #{ $self }__container--bronze & {
-      width: calc(50% - 40px);
-    }
-
-    #{ $self }__container--regular & {
-      width: calc(33% - 40px);
-    }
-  }
-
   @keyframes sponsors__fade {
     from { opacity: 0; transform: translate3d(0, -40px, 0) }
     to { opacity: 1; transform: translate3d(0, 0, 0) }
@@ -81,42 +70,12 @@
 @include media-query($on-laptop) {
   .sponsors {
     $self: &;
-    &__container {
-      margin-bottom: 80px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    &__link {
-      #{ $self }__container--bronze & {
-       width: calc(80% - 60px);
-      }
-      #{ $self }__container--regular & {
-       width: calc(50% - 60px);
-      }
-    }
   }
 }
 
 @include media-query($on-palm) {
   .sponsors {
     $self: &;
-    &__container {
-      flex-direction: column;
-      margin-bottom: 40px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    &__logo {
-      width: 60%;
-      #{ $self }__container--bronze & {
-        width: 100%;
-      }
-    }
-    &__link {
-      width: calc(100% - 60px) !important;
-    }
     &__leaf {
       &--0 {
         width: 140px;

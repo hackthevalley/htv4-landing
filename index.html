@@ -81,154 +81,12 @@ faq:
 sponsors:
   headingText: Sponsors
   types:
-    - type: bronze
-      logos:
-        - alt: UTSC CMS
-          src: /uploads/utsc-cms.png
-          href: https://www.utsc.utoronto.ca/cms/computer-science-mathematics-statistics
-          width: 800px
-
-
-    - type: bronze
-      logos:
-        - alt: HackerEarth
-          src: /uploads/hackerearth.png
-          href: https://www.hackerearth.com/
-          width: 350px
-  
-    - type: bronze
-      logos:
-
-        - alt: FDM Group
-          src: /uploads/fdm-logo-new.png
-          href: https://www.fdmgroup.com/
-          width: 300px
-
-        - alt: Rogers
-          src: /uploads/rogers-logo.png
-          href: https://www.rogers.com/
-          width: 320px
-
-        - alt: You.i TV
-          src: /uploads/youitv-logo-transparent.png
-          href: https://www.youi.tv/
-          width: 300px
-
-        - alt: Google Cloud Platform
-          src: /uploads/googlecloud.png
-          href: https://cloud.google.com/
-          width: 600px
-
-        - alt: Good Ideas Fund
-          src: /uploads/gif.png
-          href: http://harthouse.ca/good-ideas/
-          width: 400px
-    - type: regular
-      logos:
-        - alt: Coinberry
-          src: /uploads/coinberry-logo.png
-          href: https://coinberry.com
-          width: 180px
-
-        - alt: .tech Domains
-          src: /uploads/tech-domains-logo.png
-          href: https://get.tech
-          width: 130px
-        
-        - alt: Indico
-          src: /uploads/indico-logo.png
-          href: https://getindico.io
-          width: 130px
-
-        - alt: Hasura
-          src: /uploads/hasura.svg
-          href: https://hasura.io/
-          width: 170px
-
-        - alt: JetBrains
-          src: /uploads/jetbrains.png
-          href: https://www.jetbrains.com/
-          width: 100px
-
-        - alt: Red Bull
-          src: /uploads/redbull.png
-          href: https://www.redbull.com/ca-en/
-          width: 130px
-
-        - alt: Balsamiq
-          src: /uploads/balsamiq.png
-          href: https://balsamiq.com/
-          width: 150px
-
-        - alt: Google
-          src: /uploads/google.png
-          href: https://google.ca
-          width: 160px
-
-        - alt: Product Hunt
-          src: /uploads/producthunt.svg
-          href: https://www.producthunt.com/
-          width: 170px
-
-        - alt: EA
-          src: /uploads/ea.png
-          href: https://www.ea.com/en-ca
-          width: 90px
-
-        - alt: Wolfram
-          src: /uploads/wolfram.png
-          href: https://www.wolfram.com/language/
-          width: 150px
-
-        - alt: Studypool
-          src: /uploads/studypool.png
-          href: https://www.studypool.com/studyGuides
-          width: 150px
-          description: Literature Study Guides at Studypool.
-        
-        - alt: Muse
-          src: /uploads/muse.png
-          href: https://choosemuse.com/
-          width: 150px
-
-partners:
-  headingText: Partners
-  logos:
-    - alt: FEM in STEM
-      src: /uploads/feminstem-logo.png
-      href: https://www.feminstem.com/
-      width: 120px
-    - alt: Omicron
-      src: /uploads/omicron.png
-      href: http://omcn.tech/
-      width: 110px
-    - alt: MLH
-      src: /uploads/mlh.png
-      href: https://mlh.io/
-      width: 110px
-    - alt: AMACSS
-      src: /uploads/amacss.png
-      href: https://www.amacss.org/
-      width: 180px
-    - alt: The Hub
-      src: /uploads/thehub.png
-      width: 130px
-
-startups:
-  headingText: Start-Ups
-  logos:
-    - alt: CheaprEats
-      src: /uploads/cheapreats.png
-      href: https://cheapreats.com
-      width: 330px
-    - alt: Weav
-      src: /uploads/weav.png
-      href: https://letsweav.com/
-      width: 140px
-    - alt: Jumpstart
-      src: /uploads/jumpstart.png
-      href: https://jumpstart.me/
-      width: 150px
+    - name: Gold Sponsors
+      size: 400
+      companies:
+        - name: Facebook
+          href: facebook.com
+          src: /uploads/facebook.png
 ---
 <nav id="nav" class="nav">
   <div class="nav__wrapper">
@@ -287,7 +145,7 @@ startups:
   <div id="particles" style="pointer-events: none;"></div>
 
   <svg class="header__wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-    <path fill="#e8e8e8" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+    <path fill="#ffffff" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
   	c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
   	c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z" />
   </svg>
@@ -371,37 +229,37 @@ startups:
     <h2 class="htv__header sponsors__heading">{{
       page.sponsors.headingText
     }}</h2>
-    <p class="htv__placeholder">To be announced</p>
+    {% for type in page.sponsors.types %}
+      <div class="sponsors__container">
+        <h3 class='htv__header sponsors__heading sponsors__heading--sub'>{{
+          type.name  
+        }}</h3>
+        <div class='sponsors__items'>
+          {% for company in type.companies %}
+            <a
+              class="sponsors__link"
+              href="https://{{ company.href }}?utm_source=hackthevalleyio&utm_medium=referral&utm_campaign=htv4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="sponsors__logo"
+                src="{{ company.src }}"
+                alt="logo"
+                width="{{ type.size }}"
+              />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
     <p class="sponsors__footer-text">Interested in being a sponsor?</p>
     <p class="sponsors__footer-text">Send us an inquiry at 
       <a class='sponsors__footer-link' href='mailto:prasv.patel@mail.utoronto.ca'>
         prasv.patel@mail.utoronto.ca
       </a>
     </p>
-    <!--
-    {% for item in page.sponsors.types %}
-      <div class="sponsors__container sponsors__container--{{ item.type }}">
-      {% for logo in item.logos %}
-        <a
-          class="sponsors__link"
-          href="{{ logo.href }}?utm_source=hackthevalleyio&utm_medium=referral&utm_campaign=htv3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="sponsors__logo"
-            src="{{ logo.src }}"
-            alt="{{ logo.alt }}"
-            width="{{ logo.width }}"
-            height="{{ logo.height }}"
-          />
-          <p>{% if logo.description %}
-            {{ logo.description }}
-            {% endif %}</p>
-        </a>
-      {% endfor %}
-      </div>
-    {% endfor %}
+  
     <div class="htv__leaf--fade faq__leaf faq__leaf--0">
       <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
         <path d="M425.8,56.89l.47-1.1-.42,1Z" />
@@ -414,90 +272,5 @@ startups:
         <path d="M71.71,109.67C269.07-91.1,426.27,55.79,426.27,55.79s-58,51.37-239.21,70.92c0,0,112.92,15.15,225.15-39.89l.09.11c16.07-7.69,97.5-47.15,132-74.11,38.32-30,23.64.73,5.52,10.32C534.09,31.43,436.07,79.66,410,92.47,286.36,338.11,30.69,164.22,0,142.12,7.82,146.68,31,153.22,71.71,109.67Z" />
       </svg>
     </div>
-  </div>
-</section>
-
-<section id="partners" class="sponsors htv__section">
-  <div class="htv__content">
-    <h2 class="htv__header sponsors__heading">{{
-      page.partners.headingText
-    }}</h2>
-    <div class="sponsors__container">
-      {% for logo in page.partners.logos %}
-        <a
-          class="sponsors__link"
-          href="{{ logo.href }}?utm_source=hackthevalleyio&utm_medium=referral&utm_campaign=htv3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="sponsors__logo"
-            src="{{ logo.src }}"
-            alt="{{ logo.alt }}"
-            width="{{ logo.width }}"
-            height="{{ logo.height }}"
-          />
-        </a>
-
-        {% if logo.break %}
-        <div style="width: 100%;"></div>
-        {% endif %}
-      {% endfor %}
-      <p>To be announced</p>
-    </div>
-    <div class="htv__leaf--fade faq__leaf faq__leaf--0">
-      <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
-        <path d="M425.8,56.89l.47-1.1-.42,1Z" />
-        <path d="M71.71,109.67C269.07-91.1,426.27,55.79,426.27,55.79s-58,51.37-239.21,70.92c0,0,112.92,15.15,225.15-39.89l.09.11c16.07-7.69,97.5-47.15,132-74.11,38.32-30,23.64.73,5.52,10.32C534.09,31.43,436.07,79.66,410,92.47,286.36,338.11,30.69,164.22,0,142.12,7.82,146.68,31,153.22,71.71,109.67Z" />
-      </svg>
-    </div>
-    <div class="htv__leaf--fade faq__leaf faq__leaf--1">
-      <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
-        <path d="M425.8,56.89l.47-1.1-.42,1Z" />
-        <path d="M71.71,109.67C269.07-91.1,426.27,55.79,426.27,55.79s-58,51.37-239.21,70.92c0,0,112.92,15.15,225.15-39.89l.09.11c16.07-7.69,97.5-47.15,132-74.11,38.32-30,23.64.73,5.52,10.32C534.09,31.43,436.07,79.66,410,92.47,286.36,338.11,30.69,164.22,0,142.12,7.82,146.68,31,153.22,71.71,109.67Z" />
-      </svg>
-    </div>
-  </div>
-</section>
-
-<section id="startups" class="sponsors htv__section">
-  <div class="htv__content">
-    <h2 class="htv__header sponsors__heading">{{
-      page.startups.headingText
-      }}</h2>
-    <div class="sponsors__container">
-      {% for logo in page.startups.logos %}
-      <a
-        class="sponsors__link"
-        href="{{ logo.href }}?utm_source=hackthevalleyio&utm_medium=referral&utm_campaign=htv3"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          class="sponsors__logo"
-          src="{{ logo.src }}"
-          alt="{{ logo.alt }}"
-          width="{{ logo.width }}"
-          height="{{ logo.height }}"
-        />
-      </a>
-
-      {% if logo.break %}
-      <div style="width: 100%;"></div>
-      {% endif %}
-      {% endfor %}
-    </div>
-    <div class="htv__leaf--fade faq__leaf faq__leaf--0">
-      <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
-        <path d="M425.8,56.89l.47-1.1-.42,1Z" />
-        <path d="M71.71,109.67C269.07-91.1,426.27,55.79,426.27,55.79s-58,51.37-239.21,70.92c0,0,112.92,15.15,225.15-39.89l.09.11c16.07-7.69,97.5-47.15,132-74.11,38.32-30,23.64.73,5.52,10.32C534.09,31.43,436.07,79.66,410,92.47,286.36,338.11,30.69,164.22,0,142.12,7.82,146.68,31,153.22,71.71,109.67Z" />
-      </svg>
-    </div>
-    <div class="htv__leaf--fade faq__leaf faq__leaf--1">
-      <svg class="htv__leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.31 222.44">
-        <path d="M425.8,56.89l.47-1.1-.42,1Z" />
-        <path d="M71.71,109.67C269.07-91.1,426.27,55.79,426.27,55.79s-58,51.37-239.21,70.92c0,0,112.92,15.15,225.15-39.89l.09.11c16.07-7.69,97.5-47.15,132-74.11,38.32-30,23.64.73,5.52,10.32C534.09,31.43,436.07,79.66,410,92.47,286.36,338.11,30.69,164.22,0,142.12,7.82,146.68,31,153.22,71.71,109.67Z" />
-      </svg>
-    </div> -->
   </div>
 </section>
