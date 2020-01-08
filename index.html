@@ -18,7 +18,7 @@ nav:
     link: "#schedule"
   - text: Sponsors
     scroll: true
-    link: "#sponsors"
+    link: "#sponsor"
 
 about:
   headingText: About
@@ -78,10 +78,11 @@ faq:
         bodyText: >-
           It’s not about winning-it’s about exploring your passion while making great friends (which if you ask us, is a BONUS!!!). But if you’re a fan of winning, we’ve got you covered. We’ve got some great prizes in stock (will be announced soon). A panel of professional judges will select the best three hacks based on the following criteria: creativity, functionality, level of technical difficulty and quality. Most sponsors like to offer their own prizes as well for specific categories which are evaluated themselves.
         backgroundColor: "green"
+
 sponsors:
   headingText: Sponsors
   types:
-    - name: 
+    - name: Bronze
       size: 300
       companies:
         - name: Facebook
@@ -93,7 +94,7 @@ sponsors:
         - name: Balsamiq
           href: balsamiq.com
           src: /uploads/balsamiq.png
-    - name: 
+    - name: In-Kind
       size: 150
       companies:
         - name: Google
@@ -150,6 +151,14 @@ sponsors:
           }}</a>
         </li>
       {% endfor %}
+      <li class="nav__item nav__item--register">
+        <a
+          onclick="toggleNavigation(false)"
+          class="nav__item-link"
+          href="https://forms.gle/AJrphfhekRBZHhqKA"
+          target="_blank"
+        >Apply Now</a>
+      </li>
     </ul>
     <div class="nav__menu" onclick="toggleNavigation()">
       <div class="nav__bar nav__bar--top"></div>
@@ -272,16 +281,13 @@ sponsors:
   <!-- <iframe src="/assets/schedule/index.html?v=6"></iframe> -->
 </section>
 
-<section id="sponsors" class="sponsors htv__section">
+<section id="sponsor" class="sponsors htv__section">
   <div class="htv__content">
     <h2 class="htv__header sponsors__heading">{{
       page.sponsors.headingText
     }}</h2>
     {% for type in page.sponsors.types %}
       <div class="sponsors__container">
-        <h3 class='htv__header sponsors__heading sponsors__heading--sub'>{{
-          type.name
-        }}</h3>
         <div class='sponsors__items'>
           {% for company in type.companies %}
             <a
@@ -295,7 +301,6 @@ sponsors:
                 src="{{ company.src }}"
                 alt="logo"
                 width="{{ type.size }}"
-				style="margin-bottom:5vh; margin-right:4vh; margin-right:4vh"
               />
             </a>
           {% endfor %}
