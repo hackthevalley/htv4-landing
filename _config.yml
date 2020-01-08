@@ -24,6 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 copyright: Copyright Hack the Valley 2019
 facebook_username: hackthevalley
 github_username: hackthevalley
+image: /assets/ralph.jpg
 
 # Build settings
 markdown: kramdown
