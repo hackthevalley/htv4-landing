@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Hack the Valley 4
+title: Hack the Valley 5
 email: hello@hackthevalley.io
 description: >- # this means to ignore newlines until "baseurl:"
   UofT Scarborough is hosting a 36h Hackathon from February 14nd to 16th, 2020.
@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   creativity to the test!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-copyright: Copyright Hack the Valley 2019
+copyright: Copyright Hack the Valley 2020
 facebook_username: hackthevalley
 github_username: hackthevalley
 image: /assets/ralph.jpg
